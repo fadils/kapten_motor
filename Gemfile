@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 gem 'rails', '4.0.1'
+gem "bcrypt-ruby"
 gem 'sqlite3'
 gem 'mysql2'
 gem 'haml'
@@ -9,7 +10,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'redcarpet'
 gem 'faker'
-gem 'shoppe', '~> 0.0.20'
+gem 'shoppe', '~> 1.0.3'
 gem 'thin'
 
 group :development do
