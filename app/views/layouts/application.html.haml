@@ -9,12 +9,12 @@
     = yield :head
   %body
     
-    %div.demo
-      .inner
-        %ul.links
-          %li= link_to "Play with Shoppe Admin", "/shoppe"
-          %li= link_to "Browse the code", "http://github.com/tryshoppe/core"
-        %p.text This is a demo store built with #{link_to 'Shoppe', 'http://tryshoppe.com'} - an open source e-commerce platform for Rails.
+    / %div.demo
+    /  .inner
+    /    %ul.links
+    /      %li= link_to "Play with Shoppe Admin", "/shoppe"
+    /      %li= link_to "Browse the code", "http://github.com/tryshoppe/core"
+    /    %p.text This is a demo store built with #{link_to 'Shoppe', 'http://tryshoppe.com'} - an open source e-commerce platform for Rails.
     
     = display_flash
     
@@ -27,24 +27,24 @@
           %ul
             %li= link_to "Home", root_path, :nav_item => :home
             %li
-              = link_to "Our catalogue", catalogue_path, :nav_item => :catalogue, :class => 'noborder'
+              = link_to "Katalog Motor", catalogue_path, :nav_item => :catalogue, :class => 'noborder'
               %ul
                 - for category in Shoppe::ProductCategory.ordered
                   %li= link_to category.name, products_path(category.permalink)
-            %li= link_to "Why shop with us?", page_path(:why), :nav_item => :why
-            %li= link_to "FAQs", page_path(:faqs), :nav_item => :faqs
-            %li= link_to "Get in touch", page_path(:contact), :nav_item => :contact
+            %li= link_to "Proses Cicilan", page_path(:why), :nav_item => :why
+            %li= link_to "Pertanyaan", page_path(:faqs), :nav_item => :faqs
+            %li= link_to "Kontak", page_path(:contact), :nav_item => :contact
           %h1= link_to Shoppe.settings.store_name, root_path
         
         - if @full_header
-          %h2 Welcome to our <em>shoppe</em>.
-          %p.intro Check out our lovely products on this page and then you can buy them through the website with just a few clicks using our supremely simple ordering system.
+          %h2 Selamat datang di <em>KaptenMotor</em>.
+          %p.intro Nyicil motor sekarang lebih gampang! 
       
       - if @full_header
         .bar
           .inner
-            %p.call Call us today on <b>01202 901 101</b> if you have any questions.
-            %p.offer <b>This week only!</b> FREE next day shipping on all orders over &pound;30.
+            %p.call Ada pertanyaan? langsung telfon ke <b>081234567</b>
+            %p.offer <b>Hanya Bulan Ini!</b> DP serendah Rp. 500.000
     
     
     / Main content section
@@ -71,9 +71,9 @@
         %ul.links
           %li= link_to "Terms & Conditions", page_path(:terms)
           %li= link_to "Privacy policy", page_path(:privacy)
-          %li= link_to "Returns policy", page_path(:returns)
-          %li= link_to "Frequently asked questions", page_path(:faqs)
           %li= link_to "Cookie policy", page_path(:cookies)
+          %li= link_to "Pertanyaan yang sering diajukan", page_path(:faqs)
+          
       
         .callUs
           %p Got any questions? Call us today:
@@ -94,7 +94,5 @@
           %p &copy; #{Date.today.year} Shoppe. All Rights Reserved.
           %p All third party logos &amp; product images &copy; their respective owners.
           %p
-            Shoppe is a trading name of Niftyware Limited.<br />
-            Company registration number: 8514362.<br />
-            VAT registration number: GB 123 123 123.
+            KaptenMotor
           
