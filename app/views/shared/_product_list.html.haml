@@ -7,6 +7,7 @@
       %p.buttons 
         = link_to "Info", product_path(product.product_category.permalink, product.permalink)
         - if product.orderable?
-          = link_to "Add", buy_product_path(product.product_category.permalink, product.permalink), :class => 'add', :method => :post
+          = link_to "PILIH", buy_product_path(product.product_category.permalink, product.permalink), :class => 'add', :method => :post
+      %p DP Minimum
       %p.price= number_to_currency product.price
       

@@ -3,7 +3,7 @@
 - @page_title = 'KaptenMotor'
 
 .home
-  %p.browse= link_to "Cari motor", catalogue_path
-  %h2 Katalog Motor
+  /%p.browse= link_to "Cari motor", catalogue_path
+  %h2 Daftar Katalog Motor
 
 = render 'shared/product_list', :products => @products.includes(:default_image)

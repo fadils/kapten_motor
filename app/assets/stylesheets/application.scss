@@ -94,7 +94,20 @@ header.main {
 		}
 		h1 {
 			float:right;
-			margin-top:-1px;
+			margin-top:-15px;
+			a {
+				display:block;
+				border:4px solid #fad782;
+				color:#596786;
+				font-size:1.1em; 
+				text-decoration:none;
+				padding:5px 10px;
+			}
+			a:hover { opacity: 0.8; }
+		}
+		h1.full {
+			float:right;
+			margin-top:-8px;
 			a {
 				display:block;
 				border:4px solid #fad782;
@@ -307,7 +320,7 @@ section.content {
 				text-align:right;
 				margin-top:30px;
 				input {
-					background:image-url('card.svg') #226E75 no-repeat 22px 9px;
+					background:image-url('card.svg') #2d7ccc no-repeat 22px 9px;
 					background-size:20px;
 					border:0;
 					padding:8px 22px 8px 54px;
@@ -448,7 +461,7 @@ section.content {
 				td p.stock.no { color:#c04a4a; font-size:1em; background:image-url('unhappy.svg') no-repeat 0 3px; background-size:13px; padding-left:18px; font-weight:600;}
 				
 				td form {
-					input { float:right; background:#256D73; border:0; font-family:$font; height:24px; padding:4px 12px; color:#fff; border-radius:4px; font-weight:bold; font-size:0.9em; margin-left:4px;}
+					input { float:right; background:#2d7ccc; border:0; font-family:$font; height:24px; padding:4px 12px; color:#fff; border-radius:4px; font-weight:bold; font-size:0.9em; margin-left:4px;}
 					select {
 						-webkit-appearance: none;
 						background:image-url('down-arrow.svg') #DEE9EB no-repeat 24px 11px;
@@ -459,7 +472,7 @@ section.content {
 						font-weight:bold;
 						padding:4px 10px;
 						font-family:$font;
-						color:#256D73;
+						color:#2d7ccc;
 					}
 					&.no-stock {
 						select { background-color:#efefef; background-image:image-url('down-arrow-grey.svg'); color:#ccc;}
@@ -478,7 +491,7 @@ section.content {
 					p.price { width:45%; float:left; font-size:1.3em; font-weight:bold;}
 					form {
 						margin-left:50%;
-						input { float:right; background:#256D73; border:0; font-family:$font; height:24px; padding:4px 12px; color:#fff; border-radius:4px; font-weight:bold; font-size:0.9em; margin-left:4px;}
+						input { float:right; background:#2d7ccc; border:0; font-family:$font; height:24px; padding:4px 12px; color:#fff; border-radius:4px; font-weight:bold; font-size:0.9em; margin-left:4px;}
 						select {
 							-webkit-appearance: none;
 							background:image-url('down-arrow.svg') #DEE9EB no-repeat 24px 11px;
@@ -489,7 +502,7 @@ section.content {
 							font-weight:bold;
 							padding:4px 10px;
 							font-family:$font;
-							color:#256D73;
+							color:#2d7ccc;
 						}
 						&.no-stock {
 							select { background-color:#efefef; background-image:image-url('down-arrow-grey.svg'); color:#ccc;}
@@ -520,7 +533,7 @@ section.content {
 						ul li.item.box { background-image:image-url('box.svg'); background-size:14px; background-position: 0 4px;}
 						ul li.item.ask { background-image:image-url('question.svg'); background-size:14px; background-position:0 5px;}
 						ul li.item a { text-decoration:none;}
-						ul li.item a:hover { text-decoration:underline; color:#256D73;}
+						ul li.item a:hover { text-decoration:underline; color:#2d7ccc;}
 						
 						div.in_the_box {
 							display:none;
@@ -581,18 +594,19 @@ section.content {
 				a {
 					display:inline-block;
 					padding:2px 7px;
-					background:#226E75;
-					color:#fff;
+					background:#fad782;
+					color: #596786;
 					text-decoration:none;
 					border-radius:4px;
 					margin-right:4px;	
-					&.checkout { background:#333;}
+					&.checkout { background:#76b764; color:#fff; margin-top: 5px;}
 				}
 			}
 		}
 		ul.reasons {
 			background:#2d7ccc;
 			color: #f7f7f7;
+			margin-top: 25px;
 			padding:15px;
 			border-radius:8px;
 			font-size:0.9em;
@@ -612,7 +626,8 @@ section.content {
 		}
 		
 		.checkout {
-			background:#efefef;
+			background:#2d7ccc;
+			color: #f7f7f7;
 			padding:15px 25px;
 			border-bottom-left-radius:10px;
 			border-bottom-right-radius:10px;

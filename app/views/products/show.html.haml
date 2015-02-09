@@ -12,43 +12,44 @@
         %tr
           %td
             - if variant.in_stock?
-              %p.stock.yes In stock
+              %p.stock.yes 
             - else
-              %p.stock.no Out of stock
+              %p.stock.no Barang habis
             %h4= variant.name
             %p.price= number_to_currency variant.price
           %td.buy
             = form_tag buy_product_path(@product.product_category.permalink, @product.permalink, :variant => variant.id), :class => (variant.in_stock? ? 'in-stock' : 'no-stock') do
               %p
-                = select_tag 'quantity', options_for_select([1,2,3,4,5,6,7,8,9]), :disabled => !variant.in_stock?
-                = submit_tag 'Add to basket', :disabled => !variant.in_stock?
+                /= select_tag 'quantity', options_for_select([1,2,3,4,5,6,7,8,9]), :disabled => !variant.in_stock?
+                = submit_tag 'PILIH', :disabled => !variant.in_stock?
   - else
     .optionsBox
       .top
         %p.price= number_to_currency @product.price
         = form_tag buy_product_path(@product.product_category.permalink, @product.permalink), :class => (@product.in_stock? ? 'in-stock' : 'no-stock') do
           %p
-            = select_tag 'quantity', options_for_select([1,2,3,4,5,6,7,8,9]), :disabled => !@product.in_stock?
-            = submit_tag 'Add to basket', :disabled => !@product.in_stock?
+            /= select_tag 'quantity', options_for_select([1,2,3,4,5,6,7,8,9]), :disabled => !@product.in_stock?
+            = submit_tag 'PILIH', :disabled => !@product.in_stock?
       .bottom
         .stock
           - if @product.in_stock?
-            %p.yes In stock
-            %p.time Order in the next <b>#{time_until_next_delivery_cut_off}</b> for delivery #{next_delivery_day}.
+            %p.yes Barang tersedia
+            %p.time 
           - else
-            %p.no Out of stock
-            %p.time Sorry - we don't have any stock of this product at the moment. #{link_to "Let me know when you do"}.
+            %p.no Barang habis
+            %p.time Kontak kami untuk permintaan lebih lanjut
         .links
           %ul
             - if @product.data_sheet
               %li.item.datasheet= link_to "Read product datasheet", @product.data_sheet.path
             - unless @product.in_the_box.blank?
               %li.item.box
-                = link_to "What's in the box?"
+                = link_to "Rincian Cicilan"
                 %div.in_the_box
-                  %h3 What's in the box?
+                  %h3 Rincian Cicilan
                   = markdown @product.in_the_box
-            %li.item.ask= mail_to Shoppe.settings.email_address, "Ask us a question about this", :subject => "Question about the #{@product.name}"
+            %li.item.ask= mail_to Shoppe.settings.email_address, "Ada pertanyaan? Email sekarang", :subject => "Question about the #{@product.name}"
+            %li.item.ask Atau telfon ke 0812345678
 
     %hr
 

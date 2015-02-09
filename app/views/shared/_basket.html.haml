@@ -1,11 +1,11 @@
 .basket
   - if has_order? && current_order.has_items?
-    %p.quantity <b>#{pluralize current_order.total_items, 'item'}</b> in your shopping bag
-    %p.amount <b>#{number_to_currency current_order.total_before_tax}</b> (ex. tax &amp; delivery)
+    %p.quantity <b>#{pluralize current_order.total_items, 'item'}</b> Pilihan Motor
+    %p.amount <b>DP Minimum: #{number_to_currency current_order.total_before_tax}</b>
     %p.buttons
-      = link_to "View my bag", basket_path
-      = link_to "Checkout", checkout_path, :class => 'checkout'
+      = link_to "Pastikan Pilihan", basket_path
+      = link_to "Lanjut", checkout_path, :class => 'checkout'
 
   - else
-    %p.empty <b>Dengan 3 langkah mudah, motor langsung diantar</b> 
+    %p.empty <b>Anda belum memilih motor</b> 
     /%p.empty How dare it be?! Why not add some stuff to it?

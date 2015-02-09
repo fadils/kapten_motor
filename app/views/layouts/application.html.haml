@@ -34,11 +34,14 @@
             %li= link_to "Proses Cicilan", page_path(:why), :nav_item => :why
             %li= link_to "Pertanyaan", page_path(:faqs), :nav_item => :faqs
             %li= link_to "Kontak", page_path(:contact), :nav_item => :contact
-          %h1= link_to Shoppe.settings.store_name, root_path
+          - if @full_header
+            %h1.full= link_to Shoppe.settings.store_name, root_path
+          - else
+            %h1= link_to Shoppe.settings.store_name, root_path
         
         - if @full_header
-          %h2 Selamat datang di <em>KaptenMotor</em>.
-          %p.intro Nyicil motor sekarang lebih gampang! 
+          %h2 Selamat datang di <em>KaptenMotor</em>
+          %p.intro Nyicil motor sekarang lebih gampang!
       
       - if @full_header
         .bar
