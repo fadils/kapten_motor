@@ -107,7 +107,7 @@ GEM
       activesupport (>= 3.0)
       i18n
       polyamorous (~> 1.1)
-    redcarpet (3.2.2)
+    redcarpet (3.5.1)
     roo (1.13.2)
       nokogiri
       rubyzip
